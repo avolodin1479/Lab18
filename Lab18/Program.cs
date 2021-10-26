@@ -11,32 +11,32 @@ namespace Lab18
     {
         static void Main(string[] args)
         {
-            string[] Str = { "d{{{ddfdf((((sffd)sf" };
-            Stack<string> A = new Stack<string>();
+            string Str ="ddd[f{ddaa(kkk)f(sffd)s}r]f";
+            Stack<char> A = new Stack<char>();
            
-            foreach (string i in Str)
+            foreach (char i in Str)
             {
-                if (i == "(")
+                if (i == '(')
                 {
-                    A.Push(")");
+                    A.Push(')');
                 }
-                if (i == "[")
+                if (i == '[')
                 {
-                    A.Push("]");
+                    A.Push(']');
                 }
-                if (i == "{")
+                if (i == '{')
                 {
-                    A.Push("}");
+                    A.Push('}');
                 }
-                if (i == ")" && i == A.Peek())
-                {
-                    A.Pop();
-                }
-                if (i == "]" && i == A.Peek())
+                if (i == ')' && i == A.Peek())
                 {
                     A.Pop();
                 }
-                if (i == "}" && i == A.Peek())
+                if (i == ']' && i == A.Peek())
+                {
+                    A.Pop();
+                }
+                if (i == '}' && i == A.Peek())
                 {
                     A.Pop();
                 }
